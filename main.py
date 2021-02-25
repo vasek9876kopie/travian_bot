@@ -18,7 +18,7 @@ def builders_manager():
     while village_url:
 
         buildings_queue = buildings_queue.split()
-        asyncio.async(builder(village_url, buildings_queue))
+        asyncio.asyncgens(builder(village_url, buildings_queue))
 
         village_number += 1
 
